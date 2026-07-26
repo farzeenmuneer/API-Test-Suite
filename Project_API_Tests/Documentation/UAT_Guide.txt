@@ -1,0 +1,111 @@
+================================================================================
+               USER ACCEPTANCE TESTING (UAT) GUIDE
+                    API Test Suite - Release v1.0
+================================================================================
+
+To: Business Stakeholders / Product Managers
+From: QA Team
+Date: [Today's Date]
+Version: 1.0
+
+================================================================================
+1. OBJECTIVE
+================================================================================
+The purpose of this UAT guide is to validate that the User Management API is
+functionally stable, data-integrity compliant, and ready for production release.
+
+================================================================================
+2. PREREQUISITES
+================================================================================
+- Postman installed (https://www.postman.com/downloads/)
+- Internet connection to access the API
+- The following test credentials: N/A (Public API)
+
+================================================================================
+3. TEST SCENARIOS TO VALIDATE
+================================================================================
+
+Please execute each scenario and mark PASS/FAIL/FIXED.
+
+-------------------------------------------------------------------------------
+Scenario 1: GET All Users
+-------------------------------------------------------------------------------
+Objective: Verify the API returns a list of users
+Steps:
+1. Open Postman
+2. Send GET request to: https://dummyjson.com/users
+3. Verify status code is 200 OK
+
+Expected Result: List of users is displayed
+Status: [ ] PASS [ ] FAIL
+
+-------------------------------------------------------------------------------
+Scenario 2: POST Create User
+-------------------------------------------------------------------------------
+Objective: Verify the API creates a new user
+Steps:
+1. Open Postman
+2. Send POST request to: https://dummyjson.com/users/add
+3. Body (raw JSON):
+   {
+       "firstName": "John",
+       "lastName": "Doe"
+   }
+4. Verify status code is 201 Created
+5. Verify response has "id" field
+
+Expected Result: New user is created with a unique ID
+Status: [ ] PASS [ ] FAIL
+
+-------------------------------------------------------------------------------
+Scenario 3: PUT Update User
+-------------------------------------------------------------------------------
+Objective: Verify the API updates an existing user
+Steps:
+1. Open Postman
+2. Send PUT request to: https://dummyjson.com/users/1
+3. Body (raw JSON):
+   {
+       "firstName": "Updated Name",
+       "lastName": "Senior QA"
+   }
+4. Verify status code is 200 OK
+5. Verify response reflects the updated name
+
+Expected Result: User information is updated successfully
+Status: [ ] PASS [ ] FAIL
+
+-------------------------------------------------------------------------------
+Scenario 4: DELETE User
+-------------------------------------------------------------------------------
+Objective: Verify the API deletes a user
+Steps:
+1. Open Postman
+2. Send DELETE request to: https://dummyjson.com/users/1
+3. Verify status code is 200 OK
+4. Verify response has "isDeleted": true
+
+Expected Result: User is marked as deleted
+Status: [ ] PASS [ ] FAIL
+
+================================================================================
+4. RELEASE DECISION
+================================================================================
+
+[ ] APPROVED - Ready for Production Release
+[ ] NOT APPROVED - Issues identified (see comments below)
+
+Comments:
+___________________________________________________________________________
+___________________________________________________________________________
+___________________________________________________________________________
+
+================================================================================
+5. SIGN-OFF
+================================================================================
+
+Business Approver: ______________________ Date: ______
+QA Lead: ______________________ Date: ______
+Release Manager: ______________________ Date: ______
+
+================================================================================
