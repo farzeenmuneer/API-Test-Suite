@@ -27,11 +27,11 @@ Automated API testing suite using Postman with JavaScript assertions for REST AP
 - Professional bug reports
 
 ## Screenshots
-![All Tests Passing](06_All_Tests_Pass.png)
+![All Tests Passing](Project_API_Tests/Screenshots/06_All_Tests_Pass.png)
 
 ## Documentation
-- [Test Case Summary](Documentation/Test_Case_Summary.txt)
-- [Bug Report](Documentation/Bug_Report_001.txt)
+- [Test Case Summary](Project_API_Tests/Documentation/Test_Case_Summary.txt)
+- [Bug Report](Project_API_Tests/Documentation/Bug_Report_001.txt)
 
 ---
 
