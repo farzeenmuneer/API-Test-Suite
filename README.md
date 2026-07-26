@@ -34,10 +34,10 @@ Automated API testing suite using Postman with JavaScript assertions for REST AP
 - Professional bug reports with tracking history
 
 ## Documentation
-- [Test Case Summary](Documentation/Test_Case_Summary.txt)
-- [Bug Report](Documentation/Bug_Report_001.txt)
-- [UAT Guide](Documentation/UAT_Guide.txt)
-- [Release Validation Report](Documentation/Release_Validation_Report.txt)
+- [Test Case Summary](Project_API_Tests/Documentation/Test_Case_Summary.txt)
+- [Bug Report](Project_API_Tests/Documentation/Bug_Report_001.txt)
+- [UAT Guide](Project_API_Tests/Documentation/UAT_Guide.txt)
+- [Release Validation Report](Project_API_Tests/Documentation/Release_Validation_Report.txt)
 
 ## Screenshots
 All screenshots are saved in the `Screenshots/` folder:
