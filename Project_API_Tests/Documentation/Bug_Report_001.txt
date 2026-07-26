@@ -8,7 +8,7 @@ REPORTED BY:                 Farzeen Muneer
 REPORTED DATE:               26/07/2026
 SEVERITY:                    LOW
 PRIORITY:                    P3
-STATUS:                      CLOSED
+STATUS:                      CLOSED (By Design)
 
 ================================================================================
 BUG TITLE:
@@ -21,6 +21,10 @@ DESCRIPTION:
 When sending a GET request to /users, the API returns users with 'firstName' 
 and 'lastName' as separate fields instead of a single 'name' field. This could 
 cause issues for applications expecting a full name field.
+
+However, based on API documentation review, this is the intended behavior of
+the DummyJSON API. The API provides firstName and lastName separately to allow
+flexibility in how applications display user names.
 
 ================================================================================
 STEPS TO REPRODUCE:
@@ -45,5 +49,40 @@ ATTACHMENTS:
 - 01_GET_Request_Working.png
 
 ================================================================================
-STATUS: CLOSED (This is by design based on API documentation)
+COMMENTS:
+================================================================================
+This is NOT a bug. The DummyJSON API documentation confirms that firstName
+and lastName are returned as separate fields by design.
+
+Recommendation: Application developers should concatenate firstName and
+lastName in the UI layer.
+
+================================================================================
+DEFECT TRACKING HISTORY
+================================================================================
+
+| Date | Status | Action | Comments |
+|------|--------|--------|----------|
+| 26/07/2026 | NEW | Bug Reported | Initial report created by Farzeen Muneer |
+| 26/07/2026 | OPEN | Assigned to Dev Team | Developer notified for investigation |
+| 26/07/2026 | INVESTIGATING | Development | Dev confirmed this is by design per API docs |
+| 26/07/2026 | CLOSED | QA | Bug closed as "By Design" - Not a defect |
+
+================================================================================
+FINAL DECISION
+================================================================================
+
+Bug Status: CLOSED - By Design
+
+Reason: The API intentionally returns firstName and lastName separately.
+This is documented behavior and not a defect.
+
+================================================================================
+SIGN-OFF
+================================================================================
+
+QA: Farzeen Muneer ______________________ Date: 26/07/2026
+Dev Lead: N/A ______________________ Date: 26/07/2026
+Product Owner: N/A ______________________ Date: 26/07/2026
+
 ================================================================================
