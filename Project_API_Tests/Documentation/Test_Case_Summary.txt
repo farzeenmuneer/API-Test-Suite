@@ -1,0 +1,69 @@
+================================================================================
+                           TEST CASE SUMMARY
+================================================================================
+Project: API Test Suite
+Tester: Farzeen Muneer
+Date: 26/07/2026
+API Used: DummyJSON (https://dummyjson.com)
+
+================================================================================
+TC-001: GET All Users
+================================================================================
+Test Steps:
+1. Send GET request to https://dummyjson.com/users
+2. Verify status code is 200
+3. Verify response has 'users' array
+4. Verify first user has 'id' field
+
+Expected Result: Status 200, users array present, user has id
+Actual Result: PASS
+Evidence: 02_GET_Test_Pass.png
+
+================================================================================
+TC-002: POST Create User
+================================================================================
+Test Steps:
+1. Send POST request to https://dummyjson.com/users/add
+2. Send JSON: {"firstName":"Your Name","lastName":"QA Engineer"}
+3. Verify status code is 200 or 201
+4. Verify response has 'id' field
+5. Verify firstName matches request
+
+Expected Result: Status 201, user created with ID, name matches
+Actual Result: PASS
+Evidence: 03_POST_Test_Pass.png
+
+================================================================================
+TC-003: PUT Update User
+================================================================================
+Test Steps:
+1. Send PUT request to https://dummyjson.com/users/1
+2. Send JSON: {"firstName":"Updated Name","lastName":"Senior QA"}
+3. Verify status code is 200
+4. Verify firstName and lastName were updated
+
+Expected Result: Status 200, user updated successfully
+Actual Result: PASS
+Evidence: 04_PUT_Test_Pass.png
+
+================================================================================
+TC-004: DELETE User
+================================================================================
+Test Steps:
+1. Send DELETE request to https://dummyjson.com/users/1
+2. Verify status code is 200
+3. Verify response has 'isDeleted' field
+4. Verify 'isDeleted' is true
+
+Expected Result: Status 200, user marked as deleted
+Actual Result: PASS
+Evidence: 05_DELETE_Test_Pass.png
+
+================================================================================
+SUMMARY:
+================================================================================
+Total Tests: 4
+Passed: 4
+Failed: 0
+Pass Rate: 100%
+================================================================================

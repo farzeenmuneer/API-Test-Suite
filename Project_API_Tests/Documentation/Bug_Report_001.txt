@@ -1,0 +1,49 @@
+================================================================================
+                              BUG REPORT
+================================================================================
+BUG ID:                      BUG-001
+PROJECT:                     API Test Suite
+MODULE:                      API - Users
+REPORTED BY:                 Farzeen Muneer
+REPORTED DATE:               26/07/2026
+SEVERITY:                    LOW
+PRIORITY:                    P3
+STATUS:                      CLOSED
+
+================================================================================
+BUG TITLE:
+================================================================================
+GET /users returns users without full name field - Only firstName and lastName
+
+================================================================================
+DESCRIPTION:
+================================================================================
+When sending a GET request to /users, the API returns users with 'firstName' 
+and 'lastName' as separate fields instead of a single 'name' field. This could 
+cause issues for applications expecting a full name field.
+
+================================================================================
+STEPS TO REPRODUCE:
+================================================================================
+1. Send GET request to https://dummyjson.com/users
+2. Observe the response structure
+3. Note that 'name' field does not exist
+
+================================================================================
+EXPECTED RESULT:
+================================================================================
+API should return a 'name' field combining firstName and lastName.
+
+================================================================================
+ACTUAL RESULT:
+================================================================================
+API returns separate 'firstName' and 'lastName' fields.
+
+================================================================================
+ATTACHMENTS:
+================================================================================
+- 01_GET_Request_Working.png
+
+================================================================================
+STATUS: CLOSED (This is by design based on API documentation)
+================================================================================
