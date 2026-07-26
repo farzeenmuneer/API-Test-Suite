@@ -33,29 +33,11 @@ Automated API testing suite using Postman with JavaScript assertions for REST AP
 - Regression testing via Collection Runner
 - Professional bug reports with tracking history
 
-## JD Coverage
-| Requirement | Status |
-|-------------|--------|
-| Functional Testing | ✅ |
-| API Testing | ✅ |
-| Integration Testing | ✅ |
-| Regression Testing | ✅ |
-| Defect Management | ✅ |
-| Test Cases | ✅ |
-| UAT Guides | ✅ |
-| Release Validation | ✅ |
-| SQL Data Validation | ✅ |
-| Postman | ✅ |
-
 ## Documentation
 - [Test Case Summary](Documentation/Test_Case_Summary.txt)
-- [Bug Report - BUG-001](Documentation/Bug_Report_001.txt)
+- [Bug Report](Documentation/Bug_Report_001.txt)
 - [UAT Guide](Documentation/UAT_Guide.txt)
 - [Release Validation Report](Documentation/Release_Validation_Report.txt)
-- [Regression Test Report](Documentation/Regression_Test_Report.txt)
-- [SDLC & STLC Understanding](Documentation/SDLC_STLC_Understanding.txt)
-- [Agile Understanding](Documentation/Agile_Understanding.txt)
-- [Known Issues](Documentation/Known_Issues.txt)
 
 ## Screenshots
 All screenshots are saved in the `Screenshots/` folder:
@@ -71,6 +53,20 @@ All screenshots are saved in the `Screenshots/` folder:
 2. Open Postman
 3. Click "Import" → Select the JSON file
 4. Run the collection using Collection Runner
+
+## JD Coverage
+| Requirement | Status |
+|-------------|--------|
+| Functional Testing | ✅ |
+| API Testing | ✅ |
+| Integration Testing | ✅ |
+| Regression Testing | ✅ |
+| Defect Management | ✅ |
+| Test Cases | ✅ |
+| UAT Guides | ✅ |
+| Release Validation | ✅ |
+| SQL Data Validation | ✅ |
+| Postman | ✅ |
 
 ---
 
