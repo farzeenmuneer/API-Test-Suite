@@ -3,97 +3,232 @@
                     API Test Suite - Release v1.0
 ================================================================================
 
-To: Business Stakeholders / Product Managers
-From: QA Team
-Date: [Today's Date]
-Version: 1.0
+To:                          Business Stakeholders / Product Managers
+From:                        QA Team
+Date:                        26/07/2026
+Version:                     1.0
+Document Type:               UAT Guide
 
 ================================================================================
 1. OBJECTIVE
 ================================================================================
-The purpose of this UAT guide is to validate that the User Management API is
-functionally stable, data-integrity compliant, and ready for production release.
+The purpose of this User Acceptance Testing (UAT) guide is to validate that 
+the User Management API is functionally stable, data-integrity compliant, 
+and ready for production release.
+
+This guide is designed for Business Stakeholders and Product Managers to 
+independently verify that the API meets business requirements before 
+production deployment.
 
 ================================================================================
 2. PREREQUISITES
 ================================================================================
-- Postman installed (https://www.postman.com/downloads/)
-- Internet connection to access the API
-- The following test credentials: N/A (Public API)
+
+Before starting UAT, ensure the following are ready:
+
+| # | Prerequisite | Status |
+|---|--------------|--------|
+| 1 | Postman installed (https://www.postman.com/downloads/) | [ ] |
+| 2 | Internet connection to access the API | [ ] |
+| 3 | Test credentials: N/A (Public API - No authentication required) | [ ] |
+| 4 | Access to UAT environment: https://dummyjson.com | [ ] |
+| 5 | This UAT Guide printed or accessible | [ ] |
+
+Quick Setup Instructions:
+-------------------------------------------------------------------------------
+1. Open Postman on your computer
+2. No authentication or API key is required
+3. Copy the API URLs provided in each test scenario
+4. Paste in Postman and execute
 
 ================================================================================
-3. TEST SCENARIOS TO VALIDATE
+3. TEST DATA SUMMARY
 ================================================================================
 
-Please execute each scenario and mark PASS/FAIL/FIXED.
+| Test Scenario | Test Data Used | Purpose |
+|---------------|----------------|---------|
+| GET All Users | No data required | Verify list retrieval |
+| POST Create User | firstName: "John", lastName: "Doe" | Verify user creation |
+| PUT Update User | firstName: "Updated Name", lastName: "Senior QA" | Verify user update |
+| DELETE User | User ID: 1 | Verify user deletion |
+
+================================================================================
+4. TEST SCENARIOS TO VALIDATE
+================================================================================
+
+Please execute each scenario and mark PASS/FAIL.
 
 -------------------------------------------------------------------------------
 Scenario 1: GET All Users
 -------------------------------------------------------------------------------
-Objective: Verify the API returns a list of users
-Steps:
-1. Open Postman
-2. Send GET request to: https://dummyjson.com/users
-3. Verify status code is 200 OK
+Test Case ID:               UAT-001
+Priority:                   HIGH
 
-Expected Result: List of users is displayed
-Status: [ ] PASS [ ] FAIL
+Objective: Verify the API returns a list of users successfully
+
+Steps to Execute:
+-------------------------------------------------------------------------------
+1. Open Postman
+2. Click "New" → "HTTP Request"
+3. Method: GET
+4. URL: https://dummyjson.com/users
+5. Click "Send"
+6. Observe the response
+
+Expected Result:
+-------------------------------------------------------------------------------
+- Status code: 200 OK
+- Response contains "users" array
+- Each user has "id", "firstName", "lastName" fields
+
+Actual Result:
+-------------------------------------------------------------------------------
+(To be filled by UAT Tester)
+
+Status: [ ] PASS [ ] FAIL [ ] NOT EXECUTED
 
 -------------------------------------------------------------------------------
 Scenario 2: POST Create User
 -------------------------------------------------------------------------------
-Objective: Verify the API creates a new user
-Steps:
+Test Case ID:               UAT-002
+Priority:                   HIGH
+
+Objective: Verify the API creates a new user successfully
+
+Steps to Execute:
+-------------------------------------------------------------------------------
 1. Open Postman
-2. Send POST request to: https://dummyjson.com/users/add
-3. Body (raw JSON):
+2. Click "New" → "HTTP Request"
+3. Method: POST
+4. URL: https://dummyjson.com/users/add
+5. Click "Body" tab → "raw" → "JSON"
+6. Paste the following:
    {
        "firstName": "John",
        "lastName": "Doe"
    }
-4. Verify status code is 201 Created
-5. Verify response has "id" field
+7. Click "Send"
+8. Observe the response
 
-Expected Result: New user is created with a unique ID
-Status: [ ] PASS [ ] FAIL
+Expected Result:
+-------------------------------------------------------------------------------
+- Status code: 201 Created
+- Response contains "id" field
+- Response contains "firstName": "John"
+- Response contains "lastName": "Doe"
+
+Actual Result:
+-------------------------------------------------------------------------------
+(To be filled by UAT Tester)
+
+Status: [ ] PASS [ ] FAIL [ ] NOT EXECUTED
 
 -------------------------------------------------------------------------------
 Scenario 3: PUT Update User
 -------------------------------------------------------------------------------
-Objective: Verify the API updates an existing user
-Steps:
+Test Case ID:               UAT-003
+Priority:                   MEDIUM
+
+Objective: Verify the API updates an existing user successfully
+
+Steps to Execute:
+-------------------------------------------------------------------------------
 1. Open Postman
-2. Send PUT request to: https://dummyjson.com/users/1
-3. Body (raw JSON):
+2. Click "New" → "HTTP Request"
+3. Method: PUT
+4. URL: https://dummyjson.com/users/1
+5. Click "Body" tab → "raw" → "JSON"
+6. Paste the following:
    {
        "firstName": "Updated Name",
        "lastName": "Senior QA"
    }
-4. Verify status code is 200 OK
-5. Verify response reflects the updated name
+7. Click "Send"
+8. Observe the response
 
-Expected Result: User information is updated successfully
-Status: [ ] PASS [ ] FAIL
+Expected Result:
+-------------------------------------------------------------------------------
+- Status code: 200 OK
+- Response contains "firstName": "Updated Name"
+- Response contains "lastName": "Senior QA"
+
+Actual Result:
+-------------------------------------------------------------------------------
+(To be filled by UAT Tester)
+
+Status: [ ] PASS [ ] FAIL [ ] NOT EXECUTED
 
 -------------------------------------------------------------------------------
 Scenario 4: DELETE User
 -------------------------------------------------------------------------------
-Objective: Verify the API deletes a user
-Steps:
+Test Case ID:               UAT-004
+Priority:                   MEDIUM
+
+Objective: Verify the API deletes a user successfully
+
+Steps to Execute:
+-------------------------------------------------------------------------------
 1. Open Postman
-2. Send DELETE request to: https://dummyjson.com/users/1
-3. Verify status code is 200 OK
-4. Verify response has "isDeleted": true
+2. Click "New" → "HTTP Request"
+3. Method: DELETE
+4. URL: https://dummyjson.com/users/1
+5. Click "Send"
+6. Observe the response
 
-Expected Result: User is marked as deleted
-Status: [ ] PASS [ ] FAIL
+Expected Result:
+-------------------------------------------------------------------------------
+- Status code: 200 OK
+- Response contains "isDeleted": true
+
+Actual Result:
+-------------------------------------------------------------------------------
+(To be filled by UAT Tester)
+
+Status: [ ] PASS [ ] FAIL [ ] NOT EXECUTED
 
 ================================================================================
-4. RELEASE DECISION
+5. UAT EXECUTION SUMMARY
 ================================================================================
+
+| Scenario | Test Case ID | Status | Tester | Date |
+|----------|--------------|--------|--------|------|
+| GET All Users | UAT-001 | [ ] | _________ | _____ |
+| POST Create User | UAT-002 | [ ] | _________ | _____ |
+| PUT Update User | UAT-003 | [ ] | _________ | _____ |
+| DELETE User | UAT-004 | [ ] | _________ | _____ |
+
+================================================================================
+6. KNOWN ISSUES (For UAT Awareness)
+================================================================================
+
+| Bug ID | Issue | Impact | Workaround |
+|--------|-------|--------|------------|
+| BUG-001 | GET /users returns firstName and lastName separately (no full name) | LOW | Concatenate in application code |
+| BUG-002 | DELETE performs soft delete (data not permanently removed) | MEDIUM | For permanent delete, contact dev team |
+
+These issues are documented and tracked. They do not block this release.
+
+================================================================================
+7. UAT EXECUTION NOTES
+================================================================================
+
+Please document any observations, issues, or feedback below:
+
+___________________________________________________________________________
+___________________________________________________________________________
+___________________________________________________________________________
+___________________________________________________________________________
+___________________________________________________________________________
+
+================================================================================
+8. RELEASE DECISION
+================================================================================
+
+Based on UAT execution results:
 
 [ ] APPROVED - Ready for Production Release
-[ ] NOT APPROVED - Issues identified (see comments below)
+[ ] CONDITIONALLY APPROVED - Issues identified but not blocking
+[ ] NOT APPROVED - Critical issues identified (see comments below)
 
 Comments:
 ___________________________________________________________________________
@@ -101,11 +236,34 @@ ___________________________________________________________________________
 ___________________________________________________________________________
 
 ================================================================================
-5. SIGN-OFF
+9. ROLLBACK PLAN (If UAT Fails)
 ================================================================================
 
-Business Approver: ______________________ Date: ______
-QA Lead: ______________________ Date: ______
-Release Manager: ______________________ Date: ______
+If critical issues are identified during UAT:
 
+1. Document all issues with steps to reproduce
+2. Share findings with QA Team and Development Team
+3. Development Team will address issues
+4. QA Team will perform retesting
+5. UAT will be re-executed after fixes are deployed
+6. Release will be rescheduled accordingly
+
+================================================================================
+10. SIGN-OFF
+================================================================================
+
+By signing below, you confirm that:
+
+- UAT has been executed as per this guide
+- All test results have been documented
+- Any identified issues have been communicated
+
+| Role | Name | Signature | Date |
+|------|------|-----------|------|
+| Business Approver | ______________________ | ________ | _____ |
+| QA Lead | Farzeen Muneer | ________ | 26/07/2026 |
+| Release Manager | ______________________ | ________ | _____ |
+
+================================================================================
+END OF UAT GUIDE
 ================================================================================
