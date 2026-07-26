@@ -3,8 +3,8 @@
                     API Test Suite - Release v1.0
 ================================================================================
 
-Release Date: [Today's Date]
-QA Lead: [Your Full Name]
+Release Date: 26/07/2026
+QA Lead: Farzeen Muneer
 Environment: Production
 
 ================================================================================
@@ -56,7 +56,9 @@ Based on 100% pass rate and low risk assessment, this release is:
 SIGN-OFF
 ================================================================================
 
-QA Lead: ______________________ Date: ______
-Release Manager: ______________________ Date: ______
+QA: Farzeen Muneer ______________________ Date: 26/07/2026
+Release Manager: ______________________ Date: 26/07/2026
+
+
 
 ================================================================================
