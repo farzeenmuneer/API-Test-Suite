@@ -1,7 +1,7 @@
 # 🌐 API Test Suite
 
 ## Project Overview
-Automated API testing suite using Postman with JavaScript assertions for REST API validation.
+Automated API testing suite using Postman with JavaScript assertions for REST API validation. This project demonstrates comprehensive API testing covering functional, integration, and regression testing with professional QA documentation.
 
 ## Tools Used
 - **Postman** - API testing tool
@@ -49,9 +49,9 @@ All screenshots are saved in the `Screenshots/` folder:
 - `06_All_Tests_Pass.png`
 
 ## How to Run
-1. Import the Postman collection from `Postman_Collection.json`
-2. Open Postman
-3. Click "Import" → Select the JSON file
+1. Open Postman
+2. Create requests using the URLs from Test_Case_Summary.txt
+3. Add the JavaScript assertions from the tests
 4. Run the collection using Collection Runner
 
 ## JD Coverage
